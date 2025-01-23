@@ -3,10 +3,6 @@ const nodemailer = require("nodemailer");
 var router = express.Router();
 require("dotenv").config();
 
-/* GET home page. */
-router.get("/", function (req, res, next) {
-  res.render("index", { title: "Express" });
-});
 
 router.post("/api/email", async (req, res) => {
   const { messageData, email } = req.body;
