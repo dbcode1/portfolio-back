@@ -1,0 +1,105 @@
+.work {
+  box-sizing: border-box;
+  //   &:not(:last-child) {
+  //     margin-bottom: 2rem;
+  //   }
+  &icons {
+    height: 10rem;
+  }
+}
+
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  width: 26rem;
+  height: 15rem;
+  color: #247291;
+  font-size: 0.75rem;
+
+  margin: 0 0 3rem 0;
+  & ul {
+    list-style: none;
+  }
+  &__description {
+    height: 100%;
+    &-item {
+      //line-height: 40px;
+      width: auto;
+      padding: 0.25rem 1rem;
+      color: red;
+      font-size: 0.85rem;
+      font-family: open sans;
+    }
+  }
+
+  &__side {
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    // width: auto;
+    height: inherit;
+    // max-height: 100%;
+    backface-visibility: hidden;
+    border-radius: 4px;
+    overflow: hidden;
+    &__button {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+    }
+    &--front {
+    }
+    &--back {
+      display: flex;
+      //flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+      width: 100%;
+      transform: rotateY(-180deg);
+      border: 2px solid #f8da5b;
+      background-color: #f8f7f5;
+    }
+  }
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+  }
+  &:hover &__side--back {
+    transform: rotateY(0deg);
+  }
+  &__icons {
+    padding: 6rem 0 1rem 0;
+    display: flex;
+    justify-content: center;
+
+    & > img {
+      padding: 0.5rem;
+      color: grey;
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  .screenshot {
+    max-width: 100%;
+    height: auto;
+
+    &-2 {
+      max-width: 100%;
+    }
+  }
+}
+
+.github {
+  width: 3rem;
+  margin: 0 0 1rem 0;
+}
+
+.github-link {
+  width: 6rem;
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
+}
