@@ -189,6 +189,13 @@ a:hover:active {
     border-color: orange;
   }
 }
+@media only screen and (min-width: 650px) {
+  .form-wrapper {
+    width: 70%;
+    max-width: 500px;
+  }
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -200,28 +207,27 @@ a:hover:active {
   max-height: 100%;
   padding: 3rem;
   border-radius: 0.5rem;
-}
-@media only screen and (min-width: 650px) {
-  .form {
-    width: 60%;
-    max-width: 500px;
-  }
+  max-width: 100%;
+  margin: 0 auto;
 }
 .form__message {
-  line-height: 5rem;
+  line-height: 1.25rem;
   margin-bottom: 2rem;
+  height: 10rem;
 }
 .form__email {
   text-align: center;
   padding: 1rem;
   margin-bottom: 1rem;
 }
-.form input, .form textarea {
+.form input,
+.form textarea {
   border: none;
   color: #247291;
   border-radius: 0.5rem;
 }
-.form input:focus, .form textarea:focus {
+.form input:focus,
+.form textarea:focus {
   outline: none;
 }
 .form textarea {
