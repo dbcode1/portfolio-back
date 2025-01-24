@@ -3,10 +3,9 @@ const nodemailer = require("nodemailer");
 var router = express.Router();
 require("dotenv").config();
 
-
 router.post("/api/email", async (req, res) => {
   const { messageData, email } = req.body;
-  console.log(messageData);
+  console.log(req.body.message);
   try {
     const transporter = nodemailer.createTransport({
       service: "gmail",
@@ -17,12 +16,10 @@ router.post("/api/email", async (req, res) => {
     });
 
     const mailOptions = {
-      from: "dmbrusky@gmail.com",
+      from: "",
       to: "dmbrusky@gmail.com",
-      subject: `New message from dan`,
-      // text: `${messageData}\n\nFrom: ${email}`,
-
-      text: `${messageData}\n\nFrom:`,
+      subject: `New message`,
+      text: `${req.body.message}\n\nFrom:`,
     };
 
     await transporter.sendMail(mailOptions);
