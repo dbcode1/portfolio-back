@@ -13,7 +13,7 @@ var usersRouter = require("./routes/users");
 
 app.use(cors());
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`Portfolio app listening on port ${port}`);
 });
 
