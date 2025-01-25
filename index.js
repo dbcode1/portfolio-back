@@ -8,7 +8,7 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
-var indexRouter = require("./routes/app");
+var indexRouter = require("./routes");
 var usersRouter = require("./routes/users");
 
 app.use(cors());
