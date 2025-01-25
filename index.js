@@ -8,13 +8,13 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
-var indexRouter = require("./routes/index");
+var indexRouter = require("./routes/app");
 var usersRouter = require("./routes/users");
 
 app.use(cors());
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`Portfolio app listening on port ${port}`);
 });
 
 // view engine setup
