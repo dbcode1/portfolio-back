@@ -11,6 +11,10 @@ var logger = require("morgan");
 var indexRouter = require("./routes");
 var usersRouter = require("./routes/users");
 
+app.get("/", (req, res) => {
+  res.send("hello world");
+});
+
 app.use(cors());
 
 app.listen(process.env.PORT || port, () => {
@@ -45,6 +49,5 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render("error");
 });
-
 
 module.exports = app;
